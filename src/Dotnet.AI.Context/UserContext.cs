@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 
-namespace Dotnet.AI.Console.Application;
+namespace Dotnet.AI.Context;
 
 [ExcludeFromCodeCoverage]
 public class UserContext(string userId)

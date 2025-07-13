@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_Solution
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.Console.Application", "Dotnet.AI.Console.Application\Dotnet.AI.Console.Application.csproj", "{0722A430-8046-43AC-AC1E-386180DF41EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.Tools", "Dotnet.AI.Tools\Dotnet.AI.Tools.csproj", "{118B8C71-D9C5-4308-AB33-F204DA56F762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.Context", "Dotnet.AI.Context\Dotnet.AI.Context.csproj", "{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,5 +25,13 @@ Global
 		{0722A430-8046-43AC-AC1E-386180DF41EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0722A430-8046-43AC-AC1E-386180DF41EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0722A430-8046-43AC-AC1E-386180DF41EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{118B8C71-D9C5-4308-AB33-F204DA56F762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118B8C71-D9C5-4308-AB33-F204DA56F762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118B8C71-D9C5-4308-AB33-F204DA56F762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118B8C71-D9C5-4308-AB33-F204DA56F762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

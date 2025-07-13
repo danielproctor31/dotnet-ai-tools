@@ -1,9 +1,11 @@
 using System.ComponentModel;
 
-namespace Dotnet.AI.Console.Application;
+namespace Dotnet.AI.Tools;
 
-public interface IMyCliTools
+public interface IAiChatTools
 {
+    Task<string> GetWeather([Description("The city to get weather for, e.g., 'London' or 'New York'.")] string location);
+
     [Description("Sets a user preference key-value pair in their profile. Requires a userId.")]
     Task<bool> SetUserPreference(string userId, string key, string value);
 

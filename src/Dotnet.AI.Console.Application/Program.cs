@@ -1,4 +1,6 @@
 ﻿using System.ClientModel;
+using Dotnet.AI.Context;
+using Dotnet.AI.Tools;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +13,6 @@ public static class Program
 {
     public static async Task Main(string[] args)
     {
-        // 1. Setup Configuration
         var configuration = new ConfigurationBuilder()
             .SetBasePath(AppContext.BaseDirectory)
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
@@ -21,8 +22,6 @@ public static class Program
 
         var services = new ServiceCollection();
 
-        services.AddHttpClient();
-
         var openaiClient =
             new ChatClient(configuration["OpenAI:Model"], new ApiKeyCredential(configuration["OpenAI:Key"]), new OpenAIClientOptions()
                 {
@@ -31,27 +30,26 @@ public static class Program
                 .AsIChatClient();
 
         var client = new ChatClientBuilder(openaiClient)
-            .UseFunctionInvocation()
+            .UseFunctionInvocation() // Enable function invocation for tool calls
             .Build();
 
         services.AddSingleton(client);
 
-        // Add and configure the .NET MCP Server (optional in this context, but good for standardization)
+        // Add and configure the .NET MCP Server (example, not used for this console app)
         services
             .AddMcpServer()
             .WithStdioServerTransport()
             .WithToolsFromAssembly();
 
-        services.AddSingleton<UserContextManager>();
-        // Register IMyCliTools and implementation
-        services.AddSingleton<IMyCliTools, MyCliTools>();
+        services.AddSingleton<IUserContextManager, UserContextManager>();
+        services.AddSingleton<IAiChatTools, AiChatTools>();
         services.AddSingleton<IChatOrchestrator, ChatOrchestrator>();
 
         var serviceProvider = services.BuildServiceProvider();
-        var orchestrator = serviceProvider.GetRequiredService<IChatOrchestrator>();
 
-        // Generate a simple GUID for the user ID, as there's no auth integration now.
-        // This ID will be unique per application run, but context will reset on restart.
+        var orchestrator = serviceProvider.GetRequiredService<IChatOrchestrator>();
+        var userContextManager = serviceProvider.GetRequiredService<IUserContextManager>();
+        // Generate a simple GUID for the user ID.
         var currentUserId = Guid.NewGuid().ToString();
 
         System.Console.WriteLine($"Current User Session: {currentUserId}");
@@ -74,7 +72,7 @@ public static class Program
 
             if (input.Equals("clear my context", StringComparison.CurrentCultureIgnoreCase))
             {
-                await serviceProvider.GetRequiredService<UserContextManager>().ClearContextAsync(currentUserId);
+                await userContextManager.ClearContextAsync(currentUserId);
                 System.Console.WriteLine($"Context for user '{currentUserId}' cleared from memory.");
                 continue;
             }

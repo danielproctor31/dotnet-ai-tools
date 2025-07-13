@@ -375,16 +375,6 @@
           "Microsoft.Extensions.Options": "9.0.7"
         }
       },
-      "ModelContextProtocol.Core": {
-        "type": "Transitive",
-        "resolved": "0.2.0-preview.3",
-        "contentHash": "90zVR7ZcGN6cyDZM2EjV48n/H17AdA5fYt3jjTL0PY275BquFhESyRAcorAAG3BCqV/vXo6HuQpFUuPam/9xOw==",
-        "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "9.5.0",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.5",
-          "System.Net.ServerSentEvents": "10.0.0-preview.4.25258.110"
-        }
-      },
       "Polly.Core": {
         "type": "Transitive",
         "resolved": "8.4.2",
@@ -452,6 +442,30 @@
         "type": "Transitive",
         "resolved": "8.0.0",
         "contentHash": "7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q=="
+      },
+      "dotnet.ai.context": {
+        "type": "Project",
+        "dependencies": {
+          "Microsoft.Extensions.AI": "[9.7.0, )"
+        }
+      },
+      "dotnet.ai.tools": {
+        "type": "Project",
+        "dependencies": {
+          "Dotnet.AI.Context": "[1.0.0, )",
+          "ModelContextProtocol.Core": "[0.2.0-preview.3, )"
+        }
+      },
+      "ModelContextProtocol.Core": {
+        "type": "CentralTransitive",
+        "requested": "[0.2.0-preview.3, )",
+        "resolved": "0.2.0-preview.3",
+        "contentHash": "90zVR7ZcGN6cyDZM2EjV48n/H17AdA5fYt3jjTL0PY275BquFhESyRAcorAAG3BCqV/vXo6HuQpFUuPam/9xOw==",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "9.5.0",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.5",
+          "System.Net.ServerSentEvents": "10.0.0-preview.4.25258.110"
+        }
       }
     }
   }
