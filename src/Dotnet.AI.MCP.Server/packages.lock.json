@@ -42,19 +42,6 @@
           "ModelContextProtocol.Core": "0.2.0-preview.3"
         }
       },
-      "Microsoft.Extensions.AI.Abstractions": {
-        "type": "Transitive",
-        "resolved": "9.7.0",
-        "contentHash": "RfSX87hrIMi9ebfsVjr90qs+QlcgM4iQSgbLt5ZUuZdDZWKVQDS2ZTtSMEviAvy0apqvKVHEj6jQsPJPGcFUtQ=="
-      },
-      "Microsoft.Extensions.Caching.Abstractions": {
-        "type": "Transitive",
-        "resolved": "9.0.7",
-        "contentHash": "30necCQehcg9lFkMEIE7HczcoYGML8GUH6jlincA18d896fLZM9wl5tpTPJHgzANQE/6KXRLZSWbgevgg5csSw==",
-        "dependencies": {
-          "Microsoft.Extensions.Primitives": "9.0.7"
-        }
-      },
       "Microsoft.Extensions.Configuration.Abstractions": {
         "type": "Transitive",
         "resolved": "9.0.7",
@@ -244,11 +231,6 @@
         "resolved": "9.0.7",
         "contentHash": "ti/zD9BuuO50IqlvhWQs9GHxkCmoph5BHjGiWKdg2t6Or8XoyAfRJiKag+uvd/fpASnNklfsB01WpZ4fhAe0VQ=="
       },
-      "System.Diagnostics.DiagnosticSource": {
-        "type": "Transitive",
-        "resolved": "9.0.7",
-        "contentHash": "i0uHOKl+qabSYMpY8i676wgi8TI9D3yJIh9s8eog9xhcIqWiA+8khfYkAumCmTkJNMsI7qV527VTeSiQc6tPWA=="
-      },
       "System.Diagnostics.EventLog": {
         "type": "Transitive",
         "resolved": "9.0.7",
@@ -259,43 +241,17 @@
         "resolved": "10.0.0-preview.4.25258.110",
         "contentHash": "5SG8yFN0e6y3VVaCMWSRYdDW15Apzg2LQoYUtl+jFrGb/+RLSMYmIdU9hO1hbHqpU0JD/lfBlCox0FebdAGGOQ=="
       },
-      "System.Text.Json": {
-        "type": "Transitive",
-        "resolved": "9.0.7",
-        "contentHash": "u/lN2FEEXs3ghj2ta8tWA4r2MS9Yni07K7jDmnz8h1UPDf0lIIIEMkWx383Zz4fJjJio7gDl+00RYuQ/7R8ZQw=="
-      },
-      "System.Threading.Channels": {
-        "type": "Transitive",
-        "resolved": "9.0.7",
-        "contentHash": "mkUpBpVVhSGJC45HXrA1BcDEwOsIG54kRmVMOYbdY+iXVBrYBu/awDAApXi6v/vrwx6TaF6cfg/yi7IRrV4eRQ=="
-      },
-      "dotnet.ai.context": {
-        "type": "Project",
-        "dependencies": {
-          "Microsoft.Extensions.AI": "[9.7.0, )"
-        }
-      },
       "dotnet.ai.tools": {
         "type": "Project",
         "dependencies": {
-          "Dotnet.AI.Context": "[1.0.0, )",
           "ModelContextProtocol.Core": "[0.2.0-preview.3, )"
         }
       },
-      "Microsoft.Extensions.AI": {
+      "Microsoft.Extensions.AI.Abstractions": {
         "type": "CentralTransitive",
         "requested": "[9.7.0, )",
-        "resolved": "9.7.0",
-        "contentHash": "FzkaxmLU0W5AN6b+C8EBLz24MiZ0O8oHjpuAY5DXHwzpgUfSreTmpF6ZED8I6qamdgo1VJ20SosqmI+BfOtkvQ==",
-        "dependencies": {
-          "Microsoft.Extensions.AI.Abstractions": "9.7.0",
-          "Microsoft.Extensions.Caching.Abstractions": "9.0.7",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.7",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.7",
-          "System.Diagnostics.DiagnosticSource": "9.0.7",
-          "System.Text.Json": "9.0.7",
-          "System.Threading.Channels": "9.0.7"
-        }
+        "resolved": "9.5.0",
+        "contentHash": "Y46j1S4zOPtLAHCUzhHIm1IhCMr7764754bLYupyc1JZcvLNXjUk+VC7H3Bou20S2hHgDJnfox7X/H/3BYEvzA=="
       },
       "Microsoft.Extensions.Configuration": {
         "type": "CentralTransitive",

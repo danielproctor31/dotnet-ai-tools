@@ -9,8 +9,4 @@
       <PackageReference Include="ModelContextProtocol" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Dotnet.AI.Tools\Dotnet.AI.Tools.csproj" />
-    </ItemGroup>
-
 </Project>

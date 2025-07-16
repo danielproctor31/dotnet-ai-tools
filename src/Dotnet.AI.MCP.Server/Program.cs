@@ -1,4 +1,4 @@
-﻿using Dotnet.AI.Tools;
+﻿using Dotnet.AI.MCP.Server;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -13,6 +13,6 @@ builder.Logging.AddConsole(consoleLogOptions =>
 builder.Services
     .AddMcpServer()
     .WithStdioServerTransport()
-    .WithToolsFromAssembly(typeof(AiChatTools).Assembly);
+    .WithToolsFromAssembly(typeof(McpTools).Assembly);
 
 await builder.Build().RunAsync();
