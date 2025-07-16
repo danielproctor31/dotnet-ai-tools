@@ -35,12 +35,6 @@ public static class Program
 
         services.AddSingleton(client);
 
-        // Add and configure the .NET MCP Server (example, not used for this console app)
-        services
-            .AddMcpServer()
-            .WithStdioServerTransport()
-            .WithToolsFromAssembly();
-
         services.AddSingleton<IUserContextManager, UserContextManager>();
         services.AddSingleton<IAiChatTools, AiChatTools>();
         services.AddSingleton<IChatOrchestrator, ChatOrchestrator>();

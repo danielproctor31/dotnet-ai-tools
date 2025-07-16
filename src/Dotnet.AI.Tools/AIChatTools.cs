@@ -14,7 +14,6 @@ public class AiChatTools(IUserContextManager userContextManager)
     public async Task<string> GetWeather([Description("The city to get weather for, e.g., 'London' or 'New York'.")] string location)
     {
         Console.WriteLine($"\n[TOOL CALL: GetWeather] Fetching weather for: {location}...");
-        await Task.Delay(500);
 
         if (location.Contains("London", StringComparison.OrdinalIgnoreCase))
         {

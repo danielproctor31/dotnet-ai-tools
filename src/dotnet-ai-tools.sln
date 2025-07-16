@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.Tools", "Dotnet.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.Context", "Dotnet.AI.Context\Dotnet.AI.Context.csproj", "{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.AI.MCP.Server", "Dotnet.AI.MCP.Server\Dotnet.AI.MCP.Server.csproj", "{81A9E97D-67DE-4347-83DC-3D7114D52BC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +35,9 @@ Global
 		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E13F0ADA-FF1E-48BA-8FCE-6BE5AB66E7BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A9E97D-67DE-4347-83DC-3D7114D52BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A9E97D-67DE-4347-83DC-3D7114D52BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A9E97D-67DE-4347-83DC-3D7114D52BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A9E97D-67DE-4347-83DC-3D7114D52BC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
